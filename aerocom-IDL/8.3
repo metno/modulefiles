@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+#%Module1.0#######################################################################
+## ncl modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\t IDL 8.3 for aerocom"
+}
+
+module-whatis   "IDL 8.3 for aerocom"
+set             EXELIS_DIR        /modules/trusty/user-apps/aerocom-IDL/8.3
+set             IDL_DIR           /modules/trusty/user-apps/aerocom-IDL/8.3/idl83
+set-alias       idl               $IDL_DIR/bin/idl
+set-alias       idlde             $IDL_DIR/bin/idlde
+set-alias       exelislicense     $IDL_DIR/bin/exelislicense
+set-alias       idlhelp           $IDL_DIR/bin/idlhelp
+set-alias       idlrpc            $IDL_DIR/bin/idlrpc
+setenv          EXELIS_DIR        $EXELIS_DIR
+setenv          IDL_DIR           $IDL_DIR
+setenv          _JAVA_OPTIONS     -Xmx6G
+

@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+#%Module1.0#######################################################################
+## ncl modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\tPython 3.5.1 and netcdf for aerocom"
+}
+
+module-whatis   "Python 3.5.1 and netcdf tools for aerocom"
+set             root              /modules/trusty/user-apps/aerocom-python/3.5.1
+prepend-path    PATH              $root/bin
+prepend-path    LD_LIBRARY_PATH   $root/lib
+setenv          CPPFLAG           -I$root/include
+setenv          LDFLAGS           -L$root/lib
+

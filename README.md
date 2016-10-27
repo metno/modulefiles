@@ -13,4 +13,5 @@ precise PPI nodes can use all modules on `/modules/MET/user-module`
 - fimex
 - hugo: static website generator
 - obs4cwf: process surface observations for CAMS50 projects
-
+- aerocom-IDL: IDL for aerocom
+- aerocom-python: Python and netcdf tools for aerocom
