@@ -1,0 +1,15 @@
+#%Module1.0#####################################################################
+##
+#%Module1.0#######################################################################
+## ncl modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\tMARS 0.0.0"
+}
+
+module-whatis   "MARS 0.0.0"
+set             MARS_ROOT       /modules/trusty/user-apps/MARS/0.0.0
+prepend-path    PYTHONPATH      $MARS_ROOT/lib 
+prepend-path    PATH            $MARS_ROOT/bin
+setenv          MARS_ROOT       $MARS_ROOT
+

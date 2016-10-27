@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+## emep 0.0.0 modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\temep-0.0.0"
+}
+
+module-whatis   "emep verification tools, unversioned"
+set              root             /modules/trusty/user-apps/emep/0.0.0
+prepend-path     PATH            $root/bin
+prepend-path     LD_LIBRARY_PATH $root/lib
+prepend-path     PERL5LIB        $root/lib/perl
+prepend-path     MANPATH         $root/local/man
+#prepend-path     JAVALIBDIR      $root/share/javalib
+setenv           MACHINE         "trustyMET_PPI"
+setenv           NCARG_ROOT      $root/NCL

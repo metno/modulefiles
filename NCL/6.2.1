@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+#%Module1.0#######################################################################
+## ncl modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\tNCL 6.2.1"
+}
+
+module-whatis   "NCL 4.3.2"
+set             NCARG_ROOT       /modules/trusty/user-apps/NCL/6.2.1
+prepend-path     PATH            $NCARG_ROOT/bin
+prepend-path     LD_LIBRARY_PATH $NCARG_ROOT/lib
+setenv          CPPFLAG         -I$NCARG_ROOT/include
+setenv          LDFLAGS         -L$NCARG_ROOT/lib
+setenv          NCARG_ROOT      $NCARG_ROOT
+#module add hdf5/1.8.13 OpenMPI/1.8.2
+

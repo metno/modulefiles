@@ -1,0 +1,12 @@
+#%Module1.0#####################################################################
+## fimex 0.63 modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\tecdis4cwf-1.1.0"
+}
+
+module-whatis   "ecdis4cwf 1.1.0"
+set              root             /modules/trusty/user-apps/ecdis4cwf/1.1.0
+prepend-path     PATH             $root
+setenv           ECDIS_MODULE_PATH    $root 
+module add fimex/0.63

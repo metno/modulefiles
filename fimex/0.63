@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+## fimex 0.63 modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\tfimex-0.63-metno"
+}
+
+module-whatis   "fimex 0.63-metno"
+set              root             /modules/trusty/user-apps/fimex/0.63
+prepend-path     PATH            $root/bin
+prepend-path     LD_LIBRARY_PATH $root/lib
+prepend-path     PKG_CONFIG_PATH $root/lib/pkgconfig
+prepend-path -d " " CFLAGS        -I/modules/trusty/user-apps/fimex/0.63/include -I/usr/include/libxml2  
+prepend-path -d " " FFLAGS        -I/modules/trusty/user-apps/fimex/0.63/include -I/usr/include/libxml2  
+prepend-path -d " " LDFLAGS       -fopenmp -L/modules/trusty/user-apps/fimex/0.63/lib -lfimex  
+# module add fimex/0.63
