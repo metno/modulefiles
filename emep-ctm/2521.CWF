@@ -1,0 +1,35 @@
+#%Module1.0#####################################################################
+##
+## CDO modulefile
+
+set modulefile [lrange [split [module-info name] {/}] 0 0]
+set apphome   /prod/forecast/emep/cwfemep/modules
+set appname   "emep-ctm"
+set appurl    https://github.com/metno/emep-ctm
+
+set modulefile [lrange [split [module-info name] {/}] 0 0]
+set release    [lrange [split [module-info name] {/}] 1 1]
+
+proc ModulesDisplay {} {
+  global appname release apphome
+
+  puts stderr "\nLoads $appname version $release"
+}
+
+proc ModulesHelp { } {
+  global appname appurl modulefile apphome release
+
+  puts stderr "The $modulefile modulefile defines the default system paths and"
+  puts stderr "environment variables needed to use $appname release $release.\n"
+  puts stderr "Documentation on $appurl.\n"
+}
+
+module-whatis   "EMEP-MSC/W chemical transport model"
+
+set root	$apphome/Unimod.$release
+
+prereq intelcomp/13.0.1
+prereq mpt/2.06
+prereq netcdf/4.3.0
+
+prepend-path PATH		$root/bin
