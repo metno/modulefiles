@@ -10,3 +10,4 @@ set              root             /modules/xenial/user-apps/ecdis4cwf/1.2.0
 prepend-path     PATH             $root
 setenv           ECDIS_MODULE_PATH    $root 
 module add fimex/0.63.2
+module add netcdf-fortran/4.4.4
