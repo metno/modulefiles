@@ -3,7 +3,7 @@
 ## CDO modulefile
 
 set modulefile [lrange [split [module-info name] {/}] 0 0]
-set apphome   /prod/forecast/emep/cwf/modules
+set apphome   /home/metno_op/emep/cwf/modules
 set appname   "cams50"
 set appurl    http://publicwiki.meteo.fr/confluence/display/CAMS50
 
@@ -32,11 +32,11 @@ setenv EMEP_PROYECT  CAMS50
 setenv EMEP_MODULES  $appname/$release
 
 #odule purge
-module load intelcomp/13.0.1
-module load mpt/2.06
-module load netcdf/4.3.0
-module load fftw/3.3.3
-module load python/2.7.3
+module load buildenv-intel/2015-1
+module load hdf5/1.8.14-i1501
+module load netcdf/4.3.2-i1501-hdf5-1.8.14
+#odule load fftw/3.3.4-i1501-impi-5.0.2.044
+module load python/2.7.9-basic-1
 #odule load grib/1.10.4 cdo/1.6.0 ncl/6.1.2 nco/4.3.1
 module load emep-ctm/3307.CWF
 
