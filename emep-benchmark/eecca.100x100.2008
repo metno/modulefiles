@@ -42,4 +42,4 @@ setenv         EMEP_DATA          $root/input
 setenv         EMEP_MET           $root/meteo$year
 setenv         EMEP_CONF          $root/config
 append-path    PATH               $root/bin
-
+setenv         DO_AEROCOM         /work/mifahf/DO_AEROCOM
