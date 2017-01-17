@@ -37,7 +37,7 @@ setenv         EMEP_GRID          $grid
 setenv         EMEP_DOMAIN        1,$nx,1,$ny 
 setenv         EMEP_YEAR          $year
 setenv         EMEP_PERIOD        $year-01-01,$year-12-31
-setenv         EMEP_DATA_ROOT     /home/metno/mifapw/work
+setenv         EMEP_DATA_ROOT     /home/metno/mifapw/work/Data
 setenv         EMEP_DATA          $root/input
 setenv         EMEP_MET           $root/meteo$year
 setenv         EMEP_CONF          $root/config
