@@ -1,0 +1,11 @@
+#%Module1.0#####################################################################
+## wput 0.6.2 modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\wput version 0.6.2"
+}
+
+module-whatis   "Wput is a command-line ftp-client that looks like wget but instead of downloading, uploads files or whole directories to remote ftp-servers."
+set              root            /modules/trusty/user-apps/wput/.6.2
+prepend-path     PATH            $root
+
