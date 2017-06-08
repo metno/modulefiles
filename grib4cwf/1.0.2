@@ -11,7 +11,7 @@ set              data             /lustre/storeA/project/fou/kl/CAMS50
 prepend-path     PATH             $root/bin
 setenv           GRIB2_ROOT       $root/share
 setenv           DATA_PATH        $data/output_EMEP/%Y%m
-setenv           WORK_PATH        $data/work/cwf
+setenv           WORK_PATH        $data/work/cwf/%Y%m%d
 module load grib_api/1.16.0
 module load fimex/0.63.7
 module load wput
