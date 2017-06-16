@@ -37,8 +37,8 @@ module load netcdf/4.3.2-i1501-hdf5-1.8.14
 #odule load fftw/3.3.4-i1501-impi-5.0.2.044
 module load python/2.7.9-basic-1
 #odule load grib/1.10.4 cdo/1.6.0 ncl/6.1.2 nco/4.3.1
-#module use ~metno_op/emep/modulefiles
+#odule use /home/metno_op/emep/modulefiles
 module load emep-ctm/CAMS50.201612
 
-prepend-path PATH		$root/bin
+#prepend-path PATH		$root/bin
 
