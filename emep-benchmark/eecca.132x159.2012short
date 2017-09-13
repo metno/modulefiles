@@ -1,0 +1,46 @@
+#%Module1.0#####################################################################
+##
+## CDO modulefile
+
+set modulefile [lrange [split [module-info name] {/}] 0 0]
+set apphome   /home/metno/alvarov/local/modules
+set appname   "emep-benchmark"
+set appurl    https://github.com/metno/emep-mscw
+
+set modulefile [lrange [split [module-info name] {/}] 0 0]
+set release    [lrange [split [module-info name] {/}] 1 1]
+
+proc ModulesDisplay {} {
+  global appname release apphome
+
+  puts stderr "\nLoads $appname version $release"
+}
+
+proc ModulesHelp { } {
+  global appname appurl modulefile apphome release
+
+  puts stderr "The $modulefile modulefile defines the default system paths and"
+  puts stderr "environment variables needed to use $appname release $release.\n"
+  puts stderr "Documentation on $appurl.\n"
+}
+
+module-whatis   "Benchmark dataset for the EMEP-MSC/W chemical transport model"
+
+set aux        [string toupper $release]
+set grid       [lrange [split $aux {:X.}] 0 0]
+set nx         [lrange [split $aux {:X.}] 1 1]
+set ny         [lrange [split $aux {:X.}] 2 2]
+set year       [lrange [split $aux {:X.}] 3 3]
+set year       [regexp -all -inline -- {[0-9]+} $year]
+set root       $apphome/$grid.$year
+
+setenv         EMEP_GRID          $grid
+setenv         EMEP_DOMAIN        1,$nx,1,$ny 
+setenv         EMEP_YEAR          $year
+setenv         EMEP_PERIOD        $year-01-01,$year-01-03
+setenv         EMEP_DATA_ROOT     /home/metno/mifapw/work/Data
+setenv         EMEP_DATA          $root/input
+setenv         EMEP_MET           $root/meteo$year
+setenv         EMEP_CONF          $root/config
+append-path    PATH               $root/bin
+setenv         DO_AEROCOM         /work/mifahf/DO_AEROCOM
