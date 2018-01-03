@@ -1,0 +1,14 @@
+#%Module1.0#####################################################################
+## cifs4cwf modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\tprocess surface observations for CAMS50/71 projects"
+}
+
+module-whatis   "process surface observations for CAMS50/71 projects"
+
+module load cdo/1.7.2 nco/4.6.0
+
+set             root /modules/xenial/user-apps/cifs4cwf/0.1.5
+prepend-path    PATH        $root
+prepend-path    PYTHONPATH  $root
