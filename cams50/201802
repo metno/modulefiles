@@ -1,0 +1,41 @@
+#%Module1.0#####################################################################
+##
+## cams50 modulefile
+
+
+set modulefile [lrange [split [module-info name] {/}] 0 0]
+set release    [lrange [split [module-info name] {/}] 1 1]
+set apphome   /modules/xenial/user-apps
+set appname   "cams50"
+set appurl    https://github.com/metno/emep-mscw/releases/tag/CAMS50.201705
+
+proc ModulesDisplay {} {
+  global appname release apphome
+
+  puts stderr "\nLoads $appname version $release"
+}
+
+proc ModulesHelp { } {
+  global appname appurl modulefile apphome release
+
+  puts stderr "The $modulefile modulefile defines the default system paths and"
+  puts stderr "environment variables needed to use $appname release $release.\n"
+  puts stderr "Documentation on $appurl.\n"
+}
+
+module-whatis   "EMEP-MSC/W setup for CAMS50 project"
+
+setenv EMEP_PROJECT  CAMS50
+setenv EMEP_MODULES  $appname/$release
+
+#odule purge
+module load cifs4cwf/0.1.5 
+module load ecdis4cwf/1.2.2
+module load obs4cwf/0.4.4
+module load grib4cwf/1.0.3
+
+#set root            $apphome/$appname.$release
+#prepend-path PATH   $root/bin
+
+
+
