@@ -31,6 +31,7 @@ setenv EMEP_PROYECT  CAMS50
 setenv EMEP_MODULES  $appname/$release
 
 #module purge
+module load nsc-default
 module load buildenv-intel/2015-1
 module load hdf5/1.8.14-i1501
 module load netcdf/4.3.2-i1501-hdf5-1.8.14
