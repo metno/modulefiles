@@ -1,0 +1,15 @@
+#%Module1.0#####################################################################
+## citySR4cwf modulefile
+##
+set appurl    https://gitlab.met.no/emep/citySR4cwf
+
+proc ModulesHelp { } {
+   puts stderr "\tprocess EMEP-MSC/W SR ensemble forecast for CAMS71 project"
+   puts stderr "see $appurl"
+}
+
+module-whatis   "process EMEP-MSC/W SR ensemble forecast for CAMS71 project"
+
+set             root /modules/xenial/user-apps/citySR4cwf/1.3.0
+prepend-path    PATH        $root
+#repend-path    PYTHONPATH  $root
