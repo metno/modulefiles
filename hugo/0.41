@@ -1,0 +1,11 @@
+#%Module1.0#####################################################################
+## hugo 0.41 modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\thugo static site generator version 0.41"
+}
+
+module-whatis   "hugo static site generator version 0.41"
+set              root            /modules/xenial/user-apps/hugo/0.41
+prepend-path     PATH            $root
+
