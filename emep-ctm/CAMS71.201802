@@ -4,7 +4,7 @@
 
 set modulefile [lrange [split [module-info name] {/}] 0 0]
 set release    [lrange [split [module-info name] {/}] 1 1]
-set famhome   /home/metno_op/emep/cwf
+set famhome   /home/sm_alvva/work/Benchmark/CAMS50
 set apphome   $famhome/modules
 set appname   "emep-ctm"
 set appurl    https://github.com/metno/emep-mscw/releases/tag/$release

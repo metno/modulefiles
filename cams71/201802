@@ -4,7 +4,7 @@
 
 set modulefile [lrange [split [module-info name] {/}] 0 0]
 set release    [lrange [split [module-info name] {/}] 1 1]
-set apphome   /home/metno_op/emep/cwf/modules
+set apphome   /home/sm_alvva/work/Benchmark/CAMS50/modules
 set appname   "cams71"
 set appurl    https://github.com/metno/emep-mscw/releases/tag/$release
 #set appurl    http://publicwiki.meteo.fr/confluence/display/CAMS50
