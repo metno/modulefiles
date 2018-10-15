@@ -1,0 +1,9 @@
+#%Module1.0#####################################################################
+set modulefile [lrange [split [module-info name] {/}] 0 0]
+set release    [lrange [split [module-info name] {/}] 1 1]
+
+module-whatis   "$release EMEP-MSC/W setup for ecFlow"
+
+module load cams50/$release
+module load cams71/$release
+module load uemep/$release
