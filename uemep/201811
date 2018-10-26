@@ -4,7 +4,7 @@
 
 
 set appname   "uemep"
-set release   201810
+set release   201811
 set apphome   /modules/xenial/user-apps
 set appurl    https://github.com/metno/uEMEP
 
