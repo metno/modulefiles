@@ -5,7 +5,7 @@
 set modulefile [lrange [split [module-info name] {/}] 0 0]
 set release    [lrange [split [module-info name] {/}] 1 1]
 set apphome   /home/metno_op/emep/cwf/modules
-set appname   "cams71"
+set appname   "adm"
 set appurl    https://github.com/metno/emep-mscw/releases/tag/$release
 #set appurl    http://publicwiki.meteo.fr/confluence/display/CAMS50
 
@@ -27,7 +27,7 @@ module-whatis   "EMEP-MSC/W setup for CAMS50 project"
 
 set root        $apphome/$appname.$release
 
-setenv EMEP_PROYECT  CAMS71
+setenv EMEP_PROYECT  ADM
 setenv EMEP_MODULES  $appname/$release
 
 #module purge
@@ -38,7 +38,7 @@ module load netcdf/4.3.2-i1501-hdf5-1.8.14
 #module load fftw/3.3.4-i1501-impi-5.0.2.044
 module load python/2.7.9-basic-1
 #module load grib/1.10.4 cdo/1.6.0 ncl/6.1.2 nco/4.3.1
-module load emep-ctm/CAMS71.201811
+module load emep-ctm/ADM.201812
 
 #prepend-path PATH              $root/bin
 
