@@ -48,3 +48,4 @@ setenv uEMEP_CONFIG     $root/share/uEMEP_%s.txt
 setenv uEMEP_TILE_DEF   $root/share/uEMEP_tile_$type.txt
 setenv uEMEP_TILE_TAG   $type\_%05d
 setenv uEMEP_OUTPUT     $data/uEMEP/%Y/%m/%d/uEMEP_Norway_%%s_%Y%m%d_%H.nc
+setenv uEMEP_EMISS      $data/EMEP4NO/uEMEP_emissions_for_EMEP_v2/uEMEP_emission_for_EMEP_Norway_%%s_%Y%m%d_%H.nc
