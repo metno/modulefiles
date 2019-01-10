@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+## eccodes 2.0.0 modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\tecCodes package from ECMWF version 2.0.0"
+}
+
+module-whatis   "ecCodes package from ECMWF version 2.0.0. Encode and decode GRIB and BUFR formats."
+set              root            /modules/xenial/user-apps/eccodes/2.0.0
+prepend-path     PATH            $root
+prepend-path     PATH            $root/bin
+prepend-path     LD_LIBRARY_PATH $root/lib
+prepend-path     PYTHONPATH 	 $root/lib/python2.7/site-packages
+
+prepend-path -d " " CFLAGS        -I/modules/xenial/user-apps/eccodes/2.0.0/include
+prepend-path -d " " LDFLAGS       -L/modules/xenial/user-apps/eccodes/2.0.0/lib -leccodes
+
