@@ -13,5 +13,5 @@ prepend-path     LD_LIBRARY_PATH $root/lib
 prepend-path     PYTHONPATH 	 $root/lib/python2.7/site-packages
 
 prepend-path -d " " CFLAGS        -I/modules/xenial/user-apps/eccodes/2.10.0/include
-prepend-path -d " " LDFLAGS       -L/modules/xenial/user-apps/eccodes/2.10.0/lib -leccodes
+prepend-path -d " " LDFLAGS       -L/modules/xenial/user-apps/eccodes/2.10.0/lib\ -leccodes
 
