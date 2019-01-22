@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+## obs4cwf 0.4.5 modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\tprocess surface observations for CAMS50/71 projects"
+}
+
+module-whatis   "process surface observations for CAMS50/71 projects"
+set             root /modules/xenial/user-apps/obs4cwf/0.4.5
+prepend-path    PATH        $root
+prepend-path    PYTHONPATH  $root
+
+set             data /lustre/storeA/project/fou/kl/CAMS50
+setenv          DATA_PATH   $data/ObsData/%Y%m
+setenv          WORK_PATH   $data/work/cwf_obs/%Y%m%d
+
+module load     NCL/6.4.0
+setenv          EMEPLOCAL   $root
+
