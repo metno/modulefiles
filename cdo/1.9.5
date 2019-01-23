@@ -1,0 +1,13 @@
+#%Module1.0#####################################################################
+##
+#%Module1.0#######################################################################
+## hdf-intel modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\tcdo 1.9.5"
+}
+
+module-whatis   "cdo 1.9.5"
+set             root             /modules/xenial/cdo/1.9.5
+prepend-path     PATH            $root/bin
+#prepend-path     LD_LIBRARY_PATH $root/lib
