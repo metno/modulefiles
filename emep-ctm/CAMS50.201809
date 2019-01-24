@@ -28,11 +28,10 @@ module-whatis   "EMEP-MSC/W chemical transport model"
 set root        $apphome/Unimod.$release
 set data        $famhome/Data
 
-prereq buildenv-intel/2015-1
-prereq hdf5/1.8.14-i1501
-prereq netcdf/4.3.2-i1501-hdf5-1.8.14
-#prereq fftw/3.3.4-i1501-impi-5.0.2.044
-prereq python/2.7.9-basic-1
+prereq buildenv-intel/2018a-eb
+prereq netCDF-HDF5/4.3.2-1.8.12-nsc1-intel-2018.u1-bare
+prereq FFTW/3.3.6-nsc1
+prereq Python/2.7.14-nsc1-intel-2018a-eb
 
 
 prepend-path PATH               $root/bin

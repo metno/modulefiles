@@ -31,13 +31,10 @@ setenv EMEP_PROYECT  ADM
 setenv EMEP_MODULES  $appname/$release
 
 #module purge
-module load nsc-default
-module load buildenv-intel/2015-1
-module load hdf5/1.8.14-i1501
-module load netcdf/4.3.2-i1501-hdf5-1.8.14
-#module load fftw/3.3.4-i1501-impi-5.0.2.044
-module load python/2.7.9-basic-1
-#module load grib/1.10.4 cdo/1.6.0 ncl/6.1.2 nco/4.3.1
+module load nsc
+module load buildenv-intel/2018a-eb
+module load netCDF-HDF5/4.3.2-1.8.12-nsc1-intel-2018.u1-bare
+module load Python/2.7.14-nsc1-intel-2018a-eb
 module load emep-ctm/ADM.201812
 
 #prepend-path PATH              $root/bin
