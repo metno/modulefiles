@@ -1,0 +1,31 @@
+#%Module1.0#####################################################################
+##
+## CDO modulefile
+
+set modulefile [lrange [split [module-info name] {/}] 0 0]
+set release    [lrange [split [module-info name] {/}] 1 1]
+set famhome   /home/sm_alvva/EMEP
+set appname   "emep-mscw"
+set appurl    https://github.com/metno/emep-mscw/releases
+
+proc ModulesDisplay {} {
+  global appname release
+
+  puts stderr "\nLoads $appname version $release"
+}
+
+proc ModulesHelp { } {
+  global appname appurl modulefile release
+
+  puts stderr "The $modulefile modulefile defines the default system paths and"
+  puts stderr "environment variables needed to compile $appname.\n"
+  puts stderr "Documentation on $appurl.\n"
+}
+
+module-whatis   "EMEP-MSC/W chemical transport model"
+
+setenv  MACHINE  nebula
+module  load     buildenv-intel/2018.u1-bare
+prereq           buildenv-intel/2018.u1-bare
+module  load     netCDF-HDF5/4.3.2-1.8.12-nsc1-intel-2018.u1-bare
+prereq           netCDF-HDF5/4.3.2-1.8.12-nsc1-intel-2018.u1-bare

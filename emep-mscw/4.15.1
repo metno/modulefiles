@@ -1,0 +1,35 @@
+#%Module1.0#####################################################################
+
+set tag rv4_15_1
+
+set modulefile [module-info name]
+set appname [lrange [split $modulefile {/}] 0 0]
+set release [lrange [split $modulefile {/}] 1 1]
+
+set famhome   /home/sm_alvva/EMEP
+set apphome   $famhome/$appname
+set appurl    https://github.com/metno/emep-mscw/releases/$tag
+
+proc ModulesDisplay {} {
+  global tag
+
+  puts stderr "\nLoads EMEP-MSC/W $tag"
+}
+
+proc ModulesHelp { } {
+  global appname appurl modulefile apphome release tag
+
+  puts stderr "The $modulefile modulefile defines the default system paths and"
+  puts stderr "environment variables needed to use $appname $tag.\n"
+  puts stderr "Documentation on $appurl.\n"
+}
+
+module-whatis   "EMEP-MSC/W chemical transport model"
+
+set root        $apphome
+set data        $famhome/Data
+
+prepend-path PATH               $root/$release
+
+setenv         EMEP_VERSION       $appname/$release
+setenv         EMEP_DATA          $data
