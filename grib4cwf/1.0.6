@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+## grib4cwf/1.0.6 modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\tProduce grib2 files from EMEP MCW-W model output CAMS50 (Europe) forecasts"
+}
+
+module-whatis   "Convert EMEP/MSC-W model netCDF output to CAMS50 formats"
+set              root             /modules/xenial/user-apps/grib4cwf/1.0.6
+set              data             /lustre/storeB/project/fou/kl/CAMS50
+prepend-path     PATH             $root/bin
+setenv           GRIB2_ROOT       $root/share
+setenv           DATA_PATH        $data/output_EMEP/%Y%m
+setenv           WORK_PATH        $data/work/cwf/%Y%m%d
+
+# EVA: FC/AN
+#module load grib_api/1.16.0
+#module load fimex/0.63.7
+
+# IRA:RC
+module load NCL/6.4.0
+module load cdo/1.9.5
+prereq obs4cwf
+
+# put data
+module load wput
