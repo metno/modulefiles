@@ -38,7 +38,6 @@ prepend-path PATH               $root/bin
 
 setenv         EMEP_VERSION       $release
 setenv         EMEP_DATA          $root/data
-append-path    EMEP_DATA          $data/Other
 setenv         EMEP_DATA_ROOT     $data
 
 
