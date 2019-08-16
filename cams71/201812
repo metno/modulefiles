@@ -1,6 +1,6 @@
 #%Module1.0#####################################################################
 ##
-## CDO modulefile
+## CAMS71 modulefile
 
 set modulefile [lrange [split [module-info name] {/}] 0 0]
 set release    [lrange [split [module-info name] {/}] 1 1]
@@ -23,7 +23,7 @@ proc ModulesHelp { } {
   puts stderr "Documentation on $appurl.\n"
 }
 
-module-whatis   "EMEP-MSC/W setup for CAMS50 project"
+module-whatis   "EMEP-MSC/W setup for CAMS71 project"
 
 set root        $apphome/$appname.$release
 
