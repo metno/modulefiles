@@ -28,9 +28,15 @@ module-whatis   "Setup for $appname local fraction clculations"
 module load compiler/intelPE2018
 module load netcdf/4.5.0intel18
 
+# storeA/B from environment
+if { [info exists ::env(STORE)] } {
+  set lustre            $::env(STORE)
+} else {
+  set lustre            /lustre/storeB
+}
 set root                $apphome/$appname/$release
-set data                /lustre/storeB/project/fou/kl/emep/ModelRuns
-set meps                /lustre/storeB/project/metproduction/products/meps/member_0
+set data                $lustre/project/fou/kl/emep/ModelRuns
+set meps                $lustre/project/metproduction/products/meps/member_0
 set type                40to5km
 
 prepend-path PATH       $root/bin
@@ -42,7 +48,6 @@ setenv uEMEP_VERSION    $release
 setenv uEMEP_DATA       $data
 setenv uEMEP_INPUT      $root/share/data
 setenv uEMEP_METEO      $meps
-setenv uEMEP_UTC        12
 
 setenv uEMEP_CONFIG     $root/share/uEMEP_%s.txt
 setenv uEMEP_TILE_DEF   $root/share/uEMEP_tile_$type.txt
