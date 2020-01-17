@@ -1,13 +1,13 @@
 #%Module1.0#####################################################################
 ##
-## CDO modulefile
+## CAMS50 modulefile
 
 set modulefile [lrange [split [module-info name] {/}] 0 0]
 set release    [lrange [split [module-info name] {/}] 1 1]
-set famhome   /home/metno_op/emep/cwf
-set apphome   $famhome/modules
-set appname   "emep-ctm"
+set apphome   /home/metno_op/emep/cwf/modules
+set appname   "cams50"
 set appurl    https://github.com/metno/emep-mscw/releases/tag/$release
+#set appurl    http://publicwiki.meteo.fr/confluence/display/CAMS50
 
 proc ModulesDisplay {} {
   global appname release apphome
@@ -23,21 +23,21 @@ proc ModulesHelp { } {
   puts stderr "Documentation on $appurl.\n"
 }
 
-module-whatis   "EMEP-MSC/W chemical transport model"
+module-whatis   "EMEP-MSC/W setup for CAMS50 project"
 
-set root        $apphome/Unimod.$release
-set data        $famhome/Data
+set root        $apphome/$appname.$release
 
-prereq buildenv-intel/2018a-eb
-prereq netCDF-HDF5/4.3.2-1.8.12-nsc1-intel-2018.u1-bare
-prereq FFTW/3.3.6-nsc1
-prereq Python/2.7.14-nsc1-intel-2018a-eb
+setenv EMEP_PROYECT  CAMS50
+setenv EMEP_MODULES  $appname/$release
 
+#module purge
+module load nsc
+module load buildenv-intel/2018a-eb
+module load netCDF-HDF5/4.3.2-1.8.12-nsc1-intel-2018.u1-bare
+module load FFTW/3.3.6-nsc1
+module load Python/2.7.14-nsc1-intel-2018a-eb
+module load emep-ctm/CAMS50.202001
 
-prepend-path PATH               $root/bin
-
-setenv         EMEP_VERSION       $release
-setenv         EMEP_DATA          $root/data
-setenv         EMEP_DATA_ROOT     $data
+#prepend-path PATH              $root/bin
 
 
