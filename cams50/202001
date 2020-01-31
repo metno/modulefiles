@@ -32,9 +32,6 @@ setenv EMEP_MODULES  $appname/$release
 
 #module purge
 module load nsc
-module load buildenv-intel/2018a-eb
-module load netCDF-HDF5/4.3.2-1.8.12-nsc1-intel-2018.u1-bare
-module load FFTW/3.3.6-nsc1
 module load Python/3.6.7-env-nsc1-gcc-2018a-eb
 module load emep-ctm/CAMS50.202001
 
