@@ -30,7 +30,7 @@ setenv EMEP_MODULES  $appname/$release
 
 #odule purge
 module load cifs4cwf/0.1.8
-module load ecdis4cwf/1.2.5
+module load ecdis4cwf/1.2.6
 module load obs4cwf/0.4.6
 module load grib4cwf/1.0.7
 
