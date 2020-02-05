@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+## citySR4cwf modulefile
+##
+set appurl    https://gitlab.met.no/emep/citySR4cwf
+
+proc ModulesHelp { } {
+   puts stderr "\tprocess EMEP-MSC/W SR ensemble forecast for CAMS71 project"
+   puts stderr "see $appurl"
+}
+
+module-whatis   "process EMEP-MSC/W SR ensemble forecast for CAMS71 project"
+
+set             root /modules/xenial/user-apps/citySR4cwf/1.4.0
+prepend-path    PATH        $root/bin
+setenv          DATA_PATH   /lustre/storeB/project/fou/kl/CAMS50/output_EMEP/%Y%m
+setenv          SITE_PATH   /lustre/storeA/project/aerocom/cams71/policysupport 
+
