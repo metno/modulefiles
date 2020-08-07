@@ -1,0 +1,11 @@
+#%Module1.0#####################################################################
+## fimex 0.63 modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\tSnapPy 2.0.1"
+}
+
+module-whatis   "SnapPy 2.0.1 - scripts and python modules to run snap"
+set              root             /modules/xenial/user-apps/SnapPy/2.0.1
+prepend-path     PATH            $root/bin
+prepend-path     PYTHONPATH      $root/lib/python3.5/site-packages
