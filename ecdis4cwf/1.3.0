@@ -1,0 +1,13 @@
+#%Module1.0#####################################################################
+## ecdis4cwf 1.3.0 modulefile
+##
+proc ModulesHelp { } {
+   puts stderr "\tecdis4cwf-1.3.0"
+}
+
+module-whatis   "ecdis4cwf 1.3.0"
+set              root             /modules/xenial/user-apps/ecdis4cwf/1.3.0
+prepend-path     PATH             $root
+setenv           ECDIS_MODULE_PATH    $root 
+module add fimex/1.4.2
+module add nco/4.6.0
