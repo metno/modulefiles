@@ -48,12 +48,12 @@ setenv uEMEP_VERSION    $release
 setenv uEMEP_DATA       $data
 setenv uEMEP_INPUT      $root/share/data
 setenv uEMEP_MEPS       $meps
-setenv uEMEP_METEO      $data/NORTRIP/Forecast_2019/NORTRIP_in/meps
+setenv uEMEP_METEO      $data/NORTRIP/Forecast_2020/NORTRIP_in/meps
 
 setenv uEMEP_CONFIG     $root/share/uEMEP_%s.txt
 setenv uEMEP_TILE_DEF   $root/share/uEMEP_tile_$type.txt
 setenv uEMEP_TILE_TAG   $type\_%05d
 setenv uEMEP_DATE_PATH  %Y/%m/%d/%H
 setenv uEMEP_OUTPUT     $data/uEMEP/%Y/%m/%d/%H/uEMEP_Norway_%%s_%Y%m%d_%H.nc
-setenv uEMEP_EMISS      $data/EMEP4NO/uEMEP_emissions_for_EMEP_v3/uEMEP_emission_for_EMEP_Norway_%%s_all_sand_salt_%Y%m%d_%H.nc
+setenv uEMEP_EMISS      $data/EMEP4NO/uEMEP_emissions_for_EMEP_v4/uEMEP_emission_for_EMEP_Norway_%%s_all_sand_salt_%Y%m%d_%H.nc
 setenv uEMEP_WMTSHOSTS  157.249.178.160,157.249.176.99
