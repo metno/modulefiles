@@ -56,4 +56,4 @@ setenv uEMEP_TILE_TAG   $type\_%05d
 setenv uEMEP_DATE_PATH  %Y/%m/%d/%H
 setenv uEMEP_OUTPUT     $data/uEMEP/%Y/%m/%d/%H/uEMEP_Norway_%%s_%Y%m%d_%H.nc
 setenv uEMEP_EMISS      $data/EMEP4NO/uEMEP_emissions_for_EMEP_v4/uEMEP_emission_for_EMEP_Norway_%%s_all_sand_salt_%Y%m%d_%H.nc
-setenv uEMEP_WMTSHOSTS  157.249.178.160,157.249.176.99
+setenv uEMEP_WMTSHOSTS  157.249.178.160,157.249.176.99,157.249.75.39,157.249.75.181
