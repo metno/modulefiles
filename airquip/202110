@@ -1,0 +1,42 @@
+#%Module1.0#####################################################################
+##
+## AIRQUIP modulefile
+
+set modulefile [lrange [split [module-info name] {/}] 0 0]
+set release    [lrange [split [module-info name] {/}] 1 1]
+set apphome   /home/metno_op/emep/cwf/modules
+set appname   "airquip"
+set appurl    https://github.com/metno/emep-mscw/releases/tag/$release
+#set appurl    http://publicwiki.meteo.fr/confluence/display/CAMS50
+
+proc ModulesDisplay {} {
+  global appname release apphome
+
+  puts stderr "\nLoads $appname version $release"
+}
+
+proc ModulesHelp { } {
+  global appname appurl modulefile apphome release
+
+  puts stderr "The $modulefile modulefile defines the default system paths and"
+  puts stderr "environment variables needed to use $appname release $release.\n"
+  puts stderr "Documentation on $appurl.\n"
+}
+
+module-whatis   "EMEP-MSC/W setup for EMEP4NO (airquip) project"
+
+set root        $apphome/$appname.$release
+
+setenv EMEP_PROJECT  AIRQUIP
+setenv EMEP_MODULES  $appname/$release
+
+#module purge
+module load nsc
+module load buildenv-intel/2018a-eb
+module load netCDF-HDF5/4.3.2-1.8.12-nsc1-intel-2018.u1-bare
+module load Python/3.6.7-env-nsc1-gcc-2018a-eb
+module load emep-ctm/AIRQUIP.202110
+
+#prepend-path PATH              $root/bin
+
+
