@@ -32,6 +32,6 @@ setenv EMEP_MODULES  $appname/$release
 #module purge
 module load nsc
 module load Python/3.6.7-env-nsc1-gcc-2018a-eb
-module load emep-ctm/CAMS2-71.202210
+module load emep-ctm/CAMS2-71.202211
 
 
