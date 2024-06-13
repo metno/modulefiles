@@ -24,24 +24,11 @@ proc ModulesHelp { } {
 
 module-whatis   "EMEP-MSC/W chemical transport model"
 
-switch $::env(HOSTNAME) {
-  nebula.nsc.liu.se   {setenv  MACHINE  nebula  }
-  nebula2.nsc.liu.se  {setenv  MACHINE  nebula2 }
-}
+setenv  MACHINE  nebula2
 
-switch $::env(HOSTNAME) {
-  nebula.nsc.liu.se  {
-    module  load     buildenv-intel/2018.u1-bare
-    prereq           buildenv-intel/2018.u1-bare
-    module  load     netCDF-HDF5/4.3.2-1.8.12-nsc1-intel-2018.u1-bare
-    prereq           netCDF-HDF5/4.3.2-1.8.12-nsc1-intel-2018.u1-bare
-  }
-  nebula2.nsc.liu.se {
-   #module  load     makedepf90/2.8.8-hpc1-gcc-2022a-eb
-   #prereq           makedepf90/2.8.8-hpc1-gcc-2022a-eb
-    module  load     buildenv-intel/2023a-eb
-    prereq           buildenv-intel/2023a-eb
-    module  load     netCDF-HDF5/4.9.2-1.12.2-hpc1
-    prereq           netCDF-HDF5/4.9.2-1.12.2-hpc1
-  }
-}
+#module  load     makedepf90/2.8.8-hpc1-gcc-2022a-eb
+#prereq           makedepf90/2.8.8-hpc1-gcc-2022a-eb
+module  load     buildenv-intel/2023a-eb
+prereq           buildenv-intel/2023a-eb
+module  load     netCDF-HDF5/4.9.2-1.12.2-hpc1
+prereq           netCDF-HDF5/4.9.2-1.12.2-hpc1
