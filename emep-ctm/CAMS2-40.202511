@@ -29,6 +29,7 @@ set root        $apphome/$release
 set data        $famhome/Data
 
 prepend-path PATH               $root/bin
+prepend-path PYTHONPATH         $apphome/python
 
 setenv         EMEP_VERSION       $release
 setenv         EMEP_DATA          $root/data
