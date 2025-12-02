@@ -2,6 +2,6 @@
     "git.untrackedChanges": "separate",
     "files.exclude": {
         "cams2-40": false,
-        "cams2-71": false
+        "cams2-71": true
     }
 }
