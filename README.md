@@ -4,13 +4,14 @@ Environment modules on different production and research HPCs
 ### usage
 ```bash
 # enhable specific module
-module load ~metno_op/emep/modulefiles/module_name
+module load ~sm_alvva/CWF/modulefiles/module_name
 
 # enhable all modules
-module use ~metno_op/emep/modulefiles
+module use ~sm_alvva/CWF/modulefiles
 ```
 
 ### modules
 - emep-ctm: EMEP-MSC/W chemical transport model
-- cams50: EMEP-MSC/W setup for CAMS50 project
-
+- cams-reg: EMEP-MSC/W setup for CAMS Regional Air Quality (CAMS2\_40)
+- cams-pol: EMEP-MSC/W setup for CAMS Policy Support (CAMS2\_71)
+- emep4no:  EMEP-MSC/W setup Norwegian Air Quality
