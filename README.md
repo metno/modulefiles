@@ -4,10 +4,10 @@ Environment modules on different production and research HPCs
 ### usage
 ```bash
 # enhable specific module
-module load ~sm_alvva/CWF/modulefiles/module_name
+module load ~met_lf/CWF/modulefiles/module_name
 
 # enhable all modules
-module use ~sm_alvva/CWF/modulefiles
+module use ~met_lf/CWF/modulefiles
 ```
 
 ### modules
