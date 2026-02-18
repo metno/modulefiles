@@ -12,15 +12,16 @@ More information
 
 whatis([==[Description: EMEP-MSC/W setup for CAMS2_71 forecasts.]==])
 
+local version = "CAMS2-71."..myModuleVersion()
 local cwf = pathJoin(os.getenv("HOME"), "emep", "cwf")
 local apps = pathJoin(cwf, "modules")
-local root = pathJoin(apps, "CAMS2-71."..myModuleVersion())
+local root = pathJoin(apps, version)
 
 setenv("EMEP_PROJECT", myModuleName())
 setenv("EMEP_MODULES", myModuleFullName())
-setenv("EMEP_VERSION", myModuleVersion())
+setenv("EMEP_VERSION", version)
 setenv("EMEP_DATA",    pathJoin(root, "data"))
-setenv("EMEP_DATA_ROOT",pathJoin(cwf, "data"))
+setenv("EMEP_DATA_ROOT",pathJoin(cwf, "Data"))
 
 --purge()
 prepend_path("PATH",      pathJoin(root, "bin"))
