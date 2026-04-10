@@ -1,13 +1,22 @@
 # modulefiles
 Environment modules on different production and research HPCs
 
-### usage
+### usage in kelvin
 ```bash
 # enhable specific module
 module load ~met_lf/CWF/modulefiles/module_name
 
 # enhable all modules
 module use ~met_lf/CWF/modulefiles
+```
+
+### usage in fahrenheit
+```bash
+# enhable specific module
+module load ~sm_alvva/CWF/modulefiles/module_name
+
+# enhable all modules
+module use ~sm_alvva/CWF/modulefiles
 ```
 
 ### modules
